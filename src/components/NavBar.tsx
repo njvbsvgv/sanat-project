@@ -14,8 +14,19 @@ const NavBar: FC<TNavBar> = ({ pathName }) => {
       <div className="center flex justify-center gap-x-8">
         {navBarData.map((item, index) => (
           <Link href={item.link} key={index}>
-            <h1 className={`${pathName == "/" ? "text-white" : "text-black"}`}>
+            <h1
+              className={`flex flex-col items-center gap-y-2 ${
+                pathName == "/" ? "text-white" : "text-black"
+              }`}
+            >
               {item.text}
+              {pathName == item.link && (
+                <hr
+                  className={`border-0 outline-0 w-full h-[1px] ${
+                    pathName == "/" ? "bg-white" : "bg-black"
+                  }`}
+                />
+              )}
             </h1>
           </Link>
         ))}

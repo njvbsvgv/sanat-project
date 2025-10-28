@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 const iranSans = iranSansLocal({
-  src: "../assets/fonts/Iranian Sans.ttf",
+  src: "../assets/fonts/IRANSansWeb(FaNum).woff2",
 });
 
 export const metadata: Metadata = {
